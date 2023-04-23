@@ -23,4 +23,8 @@ RSpec.describe "Comparison matchers" do
     expect(3).to be_between(2, 7).exclusive
     expect(6).to be_between(2, 7).exclusive
   end
+
+  it "match" do
+    expect("fulano@email.com").to match(/..@../)
+  end
 end
