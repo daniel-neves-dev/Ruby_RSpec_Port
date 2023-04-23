@@ -1,14 +1,26 @@
-RSpec.describe "Comparison" do
-  it "#equal or #be - same object" do
-    x = "ruby"
-    y = "ruby"
-    expect(x).not_to equal(y)
-    expect(x).to equal(x)
+RSpec.describe "Comparison matchers" do
+  it ">" do
+    expect(5).to be > 1
   end
-
-  it "#eql or #eq - same valor" do
-    x = "ruby"
-    y = "ruby"
-    expect(x).to eq(y)
-    end
+  it "<" do
+    expect(3).to be < 5
+  end
+  it ">=" do
+    expect(5).to be >= 1
+    expect(5).to be >= 5
+  end
+  it "<=" do
+    expect(5).to be <= 10
+    expect(5).to be <= 5
+  end
+  it "between inclusive" do
+    expect(5).to be_between(2, 7).inclusive
+    expect(2).to be_between(2, 7).inclusive
+    expect(7).to be_between(2, 7).inclusive
+  end
+  it "between exclusive" do
+    expect(5).to be_between(2, 7).exclusive
+    expect(3).to be_between(2, 7).exclusive
+    expect(6).to be_between(2, 7).exclusive
+  end
 end
