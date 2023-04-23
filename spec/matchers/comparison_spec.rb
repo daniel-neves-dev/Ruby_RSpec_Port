@@ -23,8 +23,15 @@ RSpec.describe "Comparison matchers" do
     expect(3).to be_between(2, 7).exclusive
     expect(6).to be_between(2, 7).exclusive
   end
-
   it "match" do
     expect("fulano@email.com").to match(/..@../)
+  end
+  it "start with" do
+    expect("fulano de tal").to start_with("fulano")
+    expect([1, 2, 3]). to start_with(1)
+  end
+  it "end with" do
+    expect("fulano de tal").to end_with("tal")
+    expect([1, 2, 3]). to end_with(3)
   end
 end
