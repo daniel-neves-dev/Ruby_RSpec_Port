@@ -10,4 +10,7 @@ RSpec.describe "Classes" do
     expect("ruby").to respond_to(:size)
     expect("ruby").to respond_to(:length)
   end
+  it "be_a or be_an - the same of 'be kind of' " do
+    expect(10).to be_an(Integer)
+  end
 end
