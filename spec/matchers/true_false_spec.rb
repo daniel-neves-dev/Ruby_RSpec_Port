@@ -10,7 +10,7 @@ RSpec.describe "Matchers false/true " do
 
   context "truthy and falsey " do
     it "#be truthy" do
-    expect(1.odd?).to be_truthy
+      expect(1.odd?).to be_truthy
     end
     it "#be falsey" do
       expect(1.even?).to be_falsey
