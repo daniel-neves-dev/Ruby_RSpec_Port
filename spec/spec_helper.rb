@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 require "Ruby_RSpec_Port"
-
 RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
+
+  config.before(:suite) do
+    puts ">>> BEFORE all test suites <<<"
+  end
+
+  config.after(:suite) do
+    puts ">>> AFTER all test suites <<<"
+  end
+
   config.example_status_persistence_file_path = ".rspec_status"
 
-  # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
 
   config.expect_with :rspec do |c|
