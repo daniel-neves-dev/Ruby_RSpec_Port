@@ -28,10 +28,10 @@ RSpec.describe "Comparison matchers" do
   end
   it "start with" do
     expect("fulano de tal").to start_with("fulano")
-    expect([1, 2, 3]). to start_with(1)
+    expect([1, 2, 3]).to start_with(1)
   end
   it "end with" do
     expect("fulano de tal").to end_with("tal")
-    expect([1, 2, 3]). to end_with(3)
+    expect([1, 2, 3]).to end_with(3)
   end
 end
